@@ -1,0 +1,188 @@
+@import "../../app/globals.module.scss";
+
+.nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: $primaryColour;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    width: calc(100% - 2rem); /* Adjust width to account for padding */
+
+    h1 {
+        font-family: $font;
+    }
+}
+
+.hamburgerBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 4em;
+    gap: 0.7rem;
+    color: $mainTextColour;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: scale(0.6);
+
+    * {
+        background-color: $mainTextColour;
+        height: 0.25rem;
+        width: 3rem;
+        position: absolute;
+        bottom: 0;
+        border-radius: 0.3em;
+        transition: visibility 250ms, ease-in 250ms, opacity 500ms;
+        background-color: white;
+    }
+    .line1 {
+        top: 0.2rem;
+        height: 0.1rem;
+    }
+    .line2 {
+        top: 1.2rem;
+        height: 0.1rem;
+    }
+    .line3 {
+        top: 2.2rem;
+        height: 0.1rem;
+    }
+    .diagonalLine1 {
+        top: 2.2rem;
+        transition: transform 250ms, top 250ms;
+        height: 0.1rem;
+    }
+    .diagonalLine2 {
+        top: 2.2rem;
+        transition: transform 250ms, top 250ms;
+        height: 0.1rem;
+    }
+}
+//hamburger button to X button //
+.hamburgerBtn.activeHamburger {
+    .line1 {
+        top: 2.4rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 250ms, ease-out 250ms, opacity 500ms;
+    }
+    .line2 {
+        top: 2.4rem;
+        transition: visibility 250ms, ease-out 250ms, opacity 500ms;
+    }
+    .line3 {
+        top: 2.4rem;
+        transition: all ease-out 250ms;
+    }
+    .diagonalLine1 {
+        transform: rotate(45deg);
+        top: 1rem;
+
+        transition: transform 250ms 250ms, top 250ms 250ms;
+    }
+    .diagonalLine2 {
+        transform: rotate(-45deg);
+        top: 1rem;
+        transition: transform 250ms 250ms, top 250ms 250ms;
+    }
+}
+.button {
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    font-family: $font;
+    background-color: rgb(255, 128, 0);
+    color: $mainTextColour;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    transition: all 1s;
+}
+
+.link:hover {
+    text-decoration: underline;
+    transition: all 1s;
+}
+.dropDownMenu {
+    padding-top: 5rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    visibility: hidden;
+    opacity: 1;
+    background-color: none;
+    transition: all 250ms ease-in-out;
+    width: 100%;
+    height: 100svh;
+    top: 0;
+
+    a {
+        font-family: $font;
+        transition: all 250ms ease-in-out;
+        opacity: 0;
+        font-size: 1.4rem;
+        color: white;
+    }
+}
+
+.activeDropDownMenu {
+    visibility: visible;
+    opacity: 1;
+    background-color: $primaryColour;
+    position: fixed;
+    width: 100%;
+    height: 100svh;
+    z-index: 1;
+    top: 0;
+    a {
+        opacity: 1;
+    }
+}
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        position: fixed;
+        gap: 2rem;
+        padding-top: 2rem;
+        border-bottom: 1px solid white;
+        width: calc(100% - 4rem); /* Adjust width to account for margins */
+        margin-left: 2rem;
+        margin-right: 2rem;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        h1 {
+            border-right: 1px solid white;
+            padding-right: 2rem;
+        }
+        .desktopNavLinks {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            a {
+                font-family: $font;
+                color: white;
+            }
+        }
+    }
+}

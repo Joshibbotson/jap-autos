@@ -1,0 +1,84 @@
+@import "../app/globals.module.scss";
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+    margin-left: 5rem;
+
+    section {
+        display: flex;
+
+        .leftHero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 10rem;
+            width: 50%;
+            height: 100vh;
+
+            .leftHeroContainer {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin-left: 5rem;
+                margin-right: 5rem;
+                .companyName {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 100%;
+                    margin-bottom: 5rem;
+                }
+                h1 {
+                    font-size: 4rem;
+                    font-family: $font;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        .gridPanel {
+            // display: grid;
+            display: flex;
+            gap: 2rem;
+            margin-top: -5rem;
+            overflow: hidden;
+            height: 100vh;
+
+            .gridPanelLeft,
+            .gridPanelRight {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                height: 150vh;
+            }
+
+            .gridPanelRight {
+                margin-top: 5rem;
+                height: 150vh;
+            }
+        }
+
+        .imageWrapper {
+            width: 25rem;
+            height: 30rem; /* Set the desired height */
+            overflow: hidden; /* Hide the overflowed part of the image */
+            position: relative;
+            object-position: left;
+        }
+
+        .gridCarImg {
+            border-radius: 1rem;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This will crop the image */
+            object-position: left;
+        }
+
+        .gridPanel > .imageWrapper:nth-child(2n + 1) {
+            margin-top: 1rem; /* Adjust the value to make images on the right slightly higher */
+        }
+    }
+}

@@ -1,0 +1,17 @@
+$darkPrimaryColour: #88924e;
+$primaryColour: black;
+$secondaryColour: #88924e;
+
+$mainTextColour: black;
+$font: "Karla", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+.body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $primaryColour;
+    color: white;
+}
+
+@media (min-width: 768px) {
+}
