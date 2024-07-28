@@ -51,22 +51,36 @@ const Nav = () => {
                         isActive ? s.activeDropDownMenu : ""
                     }`}
                 >
+                    <Link onClick={handleClick} className={s.link} href="/">
+                        Home
+                    </Link>
                     <Link
                         onClick={handleClick}
                         className={s.link}
-                        href="/opening-times"
+                        href="/Vehicles"
                     >
-                        Opening Times
-                    </Link>
-                    <Link onClick={handleClick} className={s.link} href="/menu">
-                        Menu
+                        Vehicles
                     </Link>{" "}
                     <Link
                         onClick={handleClick}
                         className={s.link}
-                        href="/find-us"
+                        href="/part-exchange"
                     >
-                        Find Us
+                        Part Exchange
+                    </Link>
+                    <Link
+                        onClick={handleClick}
+                        className={s.link}
+                        href="/warranty"
+                    >
+                        Warranty
+                    </Link>
+                    <Link
+                        onClick={handleClick}
+                        className={s.link}
+                        href="/about-us"
+                    >
+                        About Us
                     </Link>
                     <Link
                         onClick={handleClick}

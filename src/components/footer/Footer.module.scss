@@ -1,0 +1,43 @@
+@import "../../app//globals.module.scss";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 50vh;
+    .infoMasterContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20rem;
+        margin-top: 10rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        .infoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .fontAwesomeIcon {
+                width: 3rem;
+            }
+        }
+    }
+    hr {
+        margin-top: 10rem;
+        background-color: white;
+
+        margin-left: 5rem;
+        margin-right: 5rem;
+        width: calc(100% - 10rem); /* Adjust width to account for margins */
+    }
+
+    p {
+        text-align: center;
+        font-family: $font;
+        padding: 0;
+        margin: 1rem;
+    }
+}
