@@ -1,106 +1,109 @@
 @import "../app/globals.module.scss";
 
-.main {
-    display: flex;
-    flex-direction: column;
-    margin-right: 5rem;
-    margin-left: 5rem;
-
-    section {
+@media (min-width: 768px) {
+    .main {
         display: flex;
+        flex-direction: column;
+        margin-right: 5rem;
+        margin-left: 5rem;
 
-        .leftHero {
+        section {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            margin-top: 10rem;
-            width: 50%;
 
-            .leftHeroContainer {
+            .leftHero {
                 display: flex;
                 flex-direction: column;
-                align-content: center;
-                margin-left: 5rem;
-                margin-right: 5rem;
-                .companyName {
+                align-items: center;
+                justify-content: flex-start;
+                margin-top: 10rem;
+                width: 50%;
+
+                .leftHeroContainer {
                     display: flex;
-                    justify-content: flex-end;
-                    width: 100%;
-                    margin-bottom: 5rem;
-                    margin-top: 10rem;
-                }
-                h1 {
-                    font-size: 4rem;
-                    font-family: $font;
-                    margin: 0;
-                    padding: 0;
-                }
-                p {
-                    color: $secondaryColour;
-                    font-size: 1.3rem;
-                    font-family: $font;
-                }
+                    flex-direction: column;
+                    align-content: center;
+                    margin-left: 5rem;
+                    margin-right: 5rem;
+                    .companyName {
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+                        margin-bottom: 5rem;
+                        margin-top: 10rem;
+                    }
+                    h1 {
+                        font-size: 4rem;
+                        font-family: $font;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    p {
+                        color: $secondaryColour;
+                        font-size: 1.3rem;
+                        font-family: $font;
+                    }
 
-                button {
-                    width: 15rem;
-                    padding: 0.75rem;
-                    border-radius: 0.3rem;
-                    background-color: rgb(112, 191, 255);
-                    font-size: 1.3rem;
-                    font-weight: 600;
-                    font-family: $font;
-                    cursor: pointer;
-                    transition: all 250ms ease-in;
-                }
-                button:hover {
-                    border: 1px solid rgb(112, 191, 255);
-                    background: none;
-                    color: rgb(112, 191, 255);
+                    button {
+                        width: 15rem;
+                        padding: 0.75rem;
+                        border-radius: 0.3rem;
+                        background-color: rgb(112, 191, 255);
+                        font-size: 1.3rem;
+                        font-weight: 600;
+                        font-family: $font;
+                        cursor: pointer;
+                        transition: all 250ms ease-in;
+                    }
+                    button:hover {
+                        border: 1px solid rgb(112, 191, 255);
+                        background: none;
+                        color: rgb(112, 191, 255);
+                    }
                 }
             }
-        }
 
-        .gridPanel {
-            // display: grid;
-            display: flex;
-            gap: 2rem;
-            margin-top: -5rem;
-            overflow: hidden;
-            height: 100vh;
-
-            .gridPanelLeft,
-            .gridPanelRight {
+            .gridPanel {
+                // display: grid;
                 display: flex;
-                flex-direction: column;
                 gap: 2rem;
-                height: 150vh;
+                margin-top: -5rem;
+                overflow: hidden;
+                height: 100vh;
+
+                .gridPanelLeft,
+                .gridPanelRight {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    height: 150vh;
+                }
+
+                .gridPanelRight {
+                    margin-top: 5rem;
+                    height: 150vh;
+                }
             }
 
-            .gridPanelRight {
-                margin-top: 5rem;
-                height: 150vh;
+            .imageWrapper {
+                width: 23rem;
+                height: 30rem; /* Set the desired height */
+                overflow: hidden; /* Hide the overflowed part of the image */
+                position: relative;
+                object-position: left;
+                border-radius: 1rem;
             }
-        }
 
-        .imageWrapper {
-            width: 25rem;
-            height: 30rem; /* Set the desired height */
-            overflow: hidden; /* Hide the overflowed part of the image */
-            position: relative;
-            object-position: left;
-        }
+            .gridCarImg {
+                border-radius: 1rem;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* This will crop the image */
+                object-position: left;
+            }
 
-        .gridCarImg {
-            border-radius: 1rem;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* This will crop the image */
-            object-position: left;
-        }
-
-        .gridPanel > .imageWrapper:nth-child(2n + 1) {
-            margin-top: 1rem; /* Adjust the value to make images on the right slightly higher */
+            .gridPanel > .imageWrapper:nth-child(2n + 1) {
+                margin-top: 1rem; /* Adjust the value to make images on the right slightly higher */
+            }
         }
     }
 }
