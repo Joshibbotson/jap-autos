@@ -57,7 +57,9 @@ const Nav = () => {
                     <Link
                         onClick={handleClick}
                         className={s.link}
-                        href="/Vehicles"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.autotrader.co.uk/retailer/stock?sort=price-asc&page=1&dealer=10038592&onesearchad=Used&onesearchad=Nearly%20New&onesearchad=New&advertising-location=at_cars&advertising-location=at_profile_cars"
                     >
                         Vehicles
                     </Link>{" "}
@@ -107,6 +109,8 @@ const Nav = () => {
                         <Link
                             onClick={handleClick}
                             className={s.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href="https://www.autotrader.co.uk/retailer/stock?sort=price-asc&page=1&dealer=10038592&onesearchad=Used&onesearchad=Nearly%20New&onesearchad=New&advertising-location=at_cars&advertising-location=at_profile_cars"
                         >
                             Vehicles

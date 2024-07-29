@@ -28,7 +28,13 @@ export default function Home() {
                             <h1 className={s.companyName}>JAPAUTOS</h1>
                             <h1>High quality second hand cars for you</h1>
                             <p>Browse our cars now</p>
-                            <button>Cars</button>
+                            <a
+                                href="https://www.autotrader.co.uk/retailer/stock?sort=price-asc&page=1&dealer=10038592&onesearchad=Used&onesearchad=Nearly%20New&onesearchad=New&advertising-location=at_cars&advertising-location=at_profile_cars"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button>Cars</button>
+                            </a>{" "}
                         </div>
                     </div>
                     <div className={s.gridPanel}>
@@ -37,7 +43,7 @@ export default function Home() {
                                 <Image
                                     className={s.gridCarImg}
                                     src={mini}
-                                    alt="Inside Milchig"
+                                    alt="car"
                                     priority
                                 />
                             </div>
@@ -45,7 +51,7 @@ export default function Home() {
                                 <Image
                                     className={s.gridCarImg}
                                     src={genericCar}
-                                    alt="Inside Milchig"
+                                    alt="car"
                                     priority
                                 />
                             </div>
@@ -53,7 +59,7 @@ export default function Home() {
                                 <Image
                                     className={s.gridCarImg}
                                     src={typeR}
-                                    alt="Inside Milchig"
+                                    alt="car"
                                     priority
                                 />{" "}
                             </div>
@@ -61,7 +67,7 @@ export default function Home() {
                                 <Image
                                     className={s.gridCarImg}
                                     src={peugot}
-                                    alt="Inside Milchig"
+                                    alt="car"
                                     priority
                                 />
                             </div>
@@ -71,7 +77,7 @@ export default function Home() {
                                 <Image
                                     className={s.gridCarImg}
                                     src={typeR}
-                                    alt="Inside Milchig"
+                                    alt="car"
                                     priority
                                 />{" "}
                             </div>
@@ -79,7 +85,7 @@ export default function Home() {
                                 <Image
                                     className={s.gridCarImg}
                                     src={peugot}
-                                    alt="Inside Milchig"
+                                    alt="car"
                                     priority
                                 />
                             </div>
@@ -87,7 +93,7 @@ export default function Home() {
                                 <Image
                                     className={s.gridCarImg}
                                     src={typeR}
-                                    alt="Inside Milchig"
+                                    alt="car"
                                     priority
                                 />
                             </div>
@@ -100,17 +106,28 @@ export default function Home() {
 
     function mobileLayout() {
         return (
-            <main>
+            <main className={s.main}>
                 <div className={s.hero}>
-                    <div className={s.leftHeroContainer}>
-                        <h1 className={s.companyName}>JAPAUTOS</h1>
-                        <h1>High quality second hand cars for you</h1>
-                        <p>Browse our cars now</p>
-                        <button>Cars</button>
+                    <div
+                        className={s.backgroundImg}
+                        style={{ backgroundImage: `url(${typeR.src})` }}
+                    >
+                        <div className={s.heroText}>
+                            <h1 className={s.companyName}>JAPAUTOS</h1>
+                            <h2>High quality second hand cars for you</h2>
+                            <p>Browse our cars now</p>
+                            <a
+                                href="https://www.autotrader.co.uk/retailer/stock?sort=price-asc&page=1&dealer=10038592&onesearchad=Used&onesearchad=Nearly%20New&onesearchad=New&advertising-location=at_cars&advertising-location=at_profile_cars"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <button>Cars</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </main>
         );
     }
-    return desktopLayout();
+    return isMobile ? mobileLayout() : desktopLayout();
 }
