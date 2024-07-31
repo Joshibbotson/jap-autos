@@ -10,7 +10,7 @@ export default function ContactForm() {
                 name="contact"
                 action="/success"
                 method="POST"
-                data-netlify="true"
+                // data-netlify="true"
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className={styles.wrapper}>
