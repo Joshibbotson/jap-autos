@@ -1,0 +1,50 @@
+@import "../globals.module.scss";
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80svh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .infoWrapper {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 50rem;
+        font-family: $font;
+        h1 {
+            text-align: center;
+        }
+        .textWrapper {
+            border-top: 1px solid white;
+            padding: 1rem;
+        }
+    }
+}
+.hr {
+    margin-top: 10rem;
+    background-color: white;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: calc(100% - 10rem); /* Adjust width to account for margins */
+}
+
+@media (min-width: 768px) {
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        .infoWrapper {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            width: 50rem;
+            font-family: $font;
+        }
+    }
+}

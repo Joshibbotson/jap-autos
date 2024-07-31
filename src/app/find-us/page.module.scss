@@ -1,0 +1,86 @@
+@import "../globals.module.scss";
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 6rem;
+
+    .mapContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        .iframe {
+            width: 90%;
+            height: 30rem;
+            border-radius: 1rem;
+        }
+        .txtContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            margin-top: 3rem;
+            gap: 0.3rem;
+            p {
+                font-size: 1.2rem;
+                font-weight: 500;
+                font-family: $font;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+.hr {
+    margin-top: 10rem;
+    background-color: white;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: calc(100% - 10rem); /* Adjust width to account for margins */
+}
+
+@media (min-width: 768px) {
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 10rem;
+
+        .mapContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            .iframe {
+                width: 100%;
+                height: 40rem;
+                border-radius: 1rem;
+            }
+            .txtContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                margin-top: 3rem;
+                gap: 0.3rem;
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    font-family: $font;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

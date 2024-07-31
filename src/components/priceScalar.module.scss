@@ -1,0 +1,94 @@
+@import "../app/globals.module.scss";
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.scalesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 2rem;
+
+    .scaleWrappers {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.pricesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    button {
+        width: 80%;
+        padding: 0.75rem;
+        border-radius: 0.3rem;
+        background-color: rgb(112, 191, 255);
+        font-size: 1.3rem;
+        font-weight: 600;
+        font-family: $font;
+        cursor: pointer;
+        transition: all 250ms ease-in;
+    }
+    button:hover {
+        border: 1px solid rgb(112, 191, 255);
+        background: none;
+        color: rgb(112, 191, 255);
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .scalesContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+
+        .scaleWrappers {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .btn {
+        width: 100%;
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.3rem;
+            background-color: rgb(112, 191, 255);
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: $font;
+            cursor: pointer;
+            transition: all 250ms ease-in;
+        }
+        button:hover {
+            border: 1px solid rgb(112, 191, 255);
+            background: none;
+            color: rgb(112, 191, 255);
+        }
+    }
+}

@@ -31,7 +31,9 @@ const Nav = () => {
         return (
             <>
                 <nav className={s.nav}>
-                    <h1>JAPAUTOS </h1>
+                    <Link href="/">
+                        <h1>JAPAUTOS </h1>
+                    </Link>
                     <div
                         className={`${s.hamburgerBtn} ${
                             isActive ? s.activeHamburger : ""
@@ -63,13 +65,13 @@ const Nav = () => {
                     >
                         Vehicles
                     </Link>{" "}
-                    <Link
+                    {/* <Link
                         onClick={handleClick}
                         className={s.link}
                         href="/part-exchange"
                     >
                         Part Exchange
-                    </Link>
+                    </Link> */}
                     <Link
                         onClick={handleClick}
                         className={s.link}
@@ -87,7 +89,14 @@ const Nav = () => {
                     <Link
                         onClick={handleClick}
                         className={s.link}
-                        href="/contact"
+                        href="/find-us"
+                    >
+                        Find Us
+                    </Link>
+                    <Link
+                        onClick={handleClick}
+                        className={s.link}
+                        href="/contact-us"
                     >
                         Contact Us
                     </Link>
@@ -100,7 +109,9 @@ const Nav = () => {
         return (
             <>
                 <nav className={s.nav}>
-                    <h1>JAPAUTOS </h1>
+                    <Link href="/">
+                        <h1>JAPAUTOS </h1>
+                    </Link>
 
                     <div className={s.desktopNavLinks}>
                         <Link onClick={handleClick} className={s.link} href="/">
@@ -115,13 +126,13 @@ const Nav = () => {
                         >
                             Vehicles
                         </Link>{" "}
-                        <Link
+                        {/* <Link
                             onClick={handleClick}
                             className={s.link}
                             href="/part-exchange"
                         >
                             Part Exchange
-                        </Link>
+                        </Link> */}
                         <Link
                             onClick={handleClick}
                             className={s.link}
@@ -139,7 +150,14 @@ const Nav = () => {
                         <Link
                             onClick={handleClick}
                             className={s.link}
-                            href="/contact"
+                            href="/find-us"
+                        >
+                            Find Us
+                        </Link>
+                        <Link
+                            onClick={handleClick}
+                            className={s.link}
+                            href="/contact-us"
                         >
                             Contact Us
                         </Link>

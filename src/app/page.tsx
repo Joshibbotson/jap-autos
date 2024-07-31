@@ -5,12 +5,20 @@ import typeR from "../../public/typer.jpg";
 import genericCar from "../../public/car1.jpg";
 import mini from "../../public/mini.jpg";
 import peugot from "../../public/peugot.jpg";
+import toyota from "../../public/toyota.webp";
 import { useState, useEffect } from "react";
 import useWindowSize from "./hooks/useWindowsSize";
+import dynamic from "next/dynamic";
+
+// Dynamically import the PriceSlider component with client-side rendering
+const PriceSlider = dynamic(() => import("@/components/price-scalar"), {
+    ssr: false,
+});
 
 export default function Home() {
     const size = useWindowSize();
     const [isMobile, setIsMobile] = useState(true);
+
     useEffect(() => {
         if (size.width > 768) {
             setIsMobile(false);
@@ -58,7 +66,7 @@ export default function Home() {
                             <div className={s.imageWrapper}>
                                 <Image
                                     className={s.gridCarImg}
-                                    src={typeR}
+                                    src={toyota}
                                     alt="car"
                                     priority
                                 />{" "}
@@ -92,13 +100,16 @@ export default function Home() {
                             <div className={s.imageWrapper}>
                                 <Image
                                     className={s.gridCarImg}
-                                    src={typeR}
+                                    src={toyota}
                                     alt="car"
                                     priority
                                 />
                             </div>
                         </div>
                     </div>
+                </section>
+                <section className={s.priceContainer}>
+                    <PriceSlider />
                 </section>
             </main>
         );
@@ -126,8 +137,12 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <section className={s.priceContainer}>
+                    <PriceSlider />
+                </section>
             </main>
         );
     }
+
     return isMobile ? mobileLayout() : desktopLayout();
 }
