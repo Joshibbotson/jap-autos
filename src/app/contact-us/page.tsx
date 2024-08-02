@@ -79,7 +79,7 @@ export default function ContactForm() {
     return (
         <main className={styles.main}>
             <h4>Contact us</h4>
-            <form className={styles.form} onSubmit={handleSubmit} netlify>
+            <form className={styles.form} onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="contact" />
                 <div className={styles.wrapper}>
                     {submitError && (
