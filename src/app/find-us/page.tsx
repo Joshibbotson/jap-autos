@@ -13,6 +13,7 @@ const Contact = () => {
                         style={{ border: 0 }}
                         aria-hidden="false"
                     ></iframe>
+
                     <div className={s.txtContainer}>
                         <p>Unit 1 Fairfield Street</p>
                         <p>Accrington</p>
