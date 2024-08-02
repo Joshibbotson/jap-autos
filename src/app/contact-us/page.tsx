@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import styles from "./page.module.scss";
 import router from "next/router";
@@ -32,7 +33,7 @@ export default function ContactForm() {
             return;
         }
         try {
-            const res = await fetch("/", {
+            const res = await fetch("/__forms.html", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -78,7 +79,7 @@ export default function ContactForm() {
     return (
         <main className={styles.main}>
             <h4>Contact us</h4>
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit} netlify>
                 <input type="hidden" name="form-name" value="contact" />
                 <div className={styles.wrapper}>
                     {submitError && (
