@@ -33,12 +33,18 @@ export default function ContactForm() {
             return;
         }
         try {
+            const formData = new FormData(e.target as HTMLFormElement);
+            const formDataObject: Record<string, string> = {};
+            formData.forEach((value, key) => {
+                formDataObject[key] = value.toString();
+            });
+
             const res = await fetch("/__forms.html", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
-                body: encode({ "form-name": "contact", ...state }),
+                body: new URLSearchParams(formDataObject).toString(),
             });
 
             if (!res.ok) throw new Error("Failed to send message");
